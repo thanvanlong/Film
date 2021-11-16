@@ -2,6 +2,9 @@
 *{
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: url(/Film/img/home-background.png) center center / cover 
         no-repeat fixed;
@@ -9,13 +12,12 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 50px;
+    height: 70px;
     position: relative;
-    top: 5px;
     position: fixed;
-    top: 25px;
-    z-index: 1;
+    z-index: 5;
 }
 
 header img{
@@ -58,6 +60,8 @@ header .signin{
     text-decoration: none;
     color: white;
     font-family: "Ubuntu";
+    font-size: 17px;
+    font-weight: 500;
     margin-right: 30px;
     position: relative;
     width: 100%;
@@ -90,6 +94,9 @@ header .signin{
     border-radius: 10px;
     padding-left: 15px;
 }
+.sign input::placeholder{
+    color: rgba(255, 255, 255, 0.7)
+}
 .sign input:focus{
     outline: none;
     color: white;
@@ -100,6 +107,9 @@ header .signin{
     font-size: 18px;
     margin-right: 10px;
     margin-top: 3px;
+}
+.container{
+    position: relative;
 }
 .splide__slide{
     /* position: relative; */
@@ -206,6 +216,7 @@ header .signin{
     width: 100%;
     height: 200px;
     display: flex;
+    z-index: 1;
     
 }
 
@@ -221,9 +232,46 @@ header .signin{
 }
 .trending a{
     text-decoration: none;
-     position: absolute;
+    position: absolute;
     top: 30px;
-    left: 1400px;
+    right: 40px;
+    color: white;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.trending__child{
+   margin-top: 70px;
+   margin-left: 10px;
+   position: relative;
+   cursor: pointer;
+}
+.trending1{
+    position: relative;
+    top: 200px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    z-index: 1;
+    
+}
+
+
+.trending1 .muc{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: white;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 20px;
+}
+.trending1 a{
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 40px;
     color: white;
     font-family: 'Ubuntu';
     font-weight: 700;
@@ -249,7 +297,7 @@ header .signin{
     width: 90%;
     height: 100px;
     position: absolute;
-    bottom: -185px;
+    bottom: -188px;
     background :rgba(0, 0, 0, 0.5);
     transition: 0.3s;
     opacity: 0;
@@ -266,3 +314,85 @@ header .signin{
 .trending__child .thumnails span{
     margin-left: 10px;
 }
+
+.scroll{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 1px ;
+    z-index: 20;
+    background: rgba(252, 143, 0, 0.8);
+    box-shadow: 0px 3px 50px #FF6B00;
+    border: none;
+    border-radius: 15px;
+    display: none;
+    cursor: pointer;
+}
+.scroll i{
+    color: white;
+    font-size: 20px;
+}
+
+footer{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 450px;
+    left: 0;
+    background: #000d1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Ubuntu';
+}
+
+footer .connect{
+    display: flex;
+    justify-content: space-between;
+}
+footer .connect span{
+    margin-left: 90px;
+}
+
+footer .connect .icons{
+    width: 150px;
+    margin-right: 145px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .info{
+    display: flex;
+    justify-content: space-around;
+}
+
+ footer .info .product{
+     width: 200px;
+     height: 130px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ footer .info .product span{
+     margin-top: 15px;
+ }
+
+ footer .copyright{
+     width: 100%;
+     height: 70px;
+     background: #000814;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     bottom: -70px;
+ }
+
+ footer .copyright a{
+     text-decoration: none;
+     color: white;
+     font-weight: 600;
+ }

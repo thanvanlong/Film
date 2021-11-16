@@ -138,6 +138,7 @@ header span{
     border-radius: 5px;
     margin-top: 7px;
     color: white;
+    padding-left: 10px;
 }
 
 .pass{
@@ -158,6 +159,7 @@ header span{
     margin-top: 7px;
     color: white;
     font-family: "Ubuntu";
+    padding-left: 10px;
     
 }
 
