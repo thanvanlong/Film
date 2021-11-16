@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+*{
+    margin: 0;
+}
+body{
+    background: url(/Film/img/home-background.png) center center / cover 
+        no-repeat fixed;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 5px;
+    position: fixed;
+    top: 25px;
+    z-index: 1;
+}
+
+header img{
+    height: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+header .signup{
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #FF6B00;
+    border-radius: 10px;
+    color: #FF6B00;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    margin-right: 15px;
+    font-family: "Ubuntu";
+    font-size: 15px;
+}
+header .signin{
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+    padding: 8px 17px;
+    background: #FF6B00;
+    box-shadow: 0px 3px 20px #FF6B00;
+    border: none;
+    border-radius: 10px;
+    margin-right: 15px;
+    color: white;
+    font-family: "Ubuntu";
+    font-size: 15px;
+    transform: scaleX(1);
+}
+
+.sign .a{
+    text-decoration: none;
+    color: white;
+    font-family: "Ubuntu";
+    margin-right: 30px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.sign .a span::after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all 250ms cubic-bezier(0.25,0.46,0.45,0.94) 0s;
+}
+.sign .a:hover span::after{
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.sign input{
+    width: 200px;
+    height: 25px;
+    margin-right: 15px;
+    background:rgba(0, 0, 0, 0.2) ;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.sign input:focus{
+    outline: none;
+    color: white;
+    padding-left: 15px;
+}
+.sign i{
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.splide__slide{
+    /* position: relative; */
+    color: white;
+    font-family: 'Ubuntu';
+}
+.splide__slide img{
+    width: 100%;
+    opacity: 0.93;
+}
+
+.splide__slide h1{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    font-family: "Ubuntu";
+    font-size: 70px;
+    font-weight: 900;
+    color: white;
+}
+
+.splide__slide h1::after{
+    content: "";
+    width: 350px;
+    height: 1px;
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    background: white;
+}
+
+.qual{
+    position: absolute;
+    top: 290px;
+    left: 100px;
+    color: white;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 17px;
+    font-family: 'Ubuntu';
+}
+
+.qual::after{
+    content: "";
+    width: 350px;
+    height: 1px;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    background: white;
+}
+
+.splide__slide p{
+    position: absolute;
+    top: 400px;
+    left: 170px;
+    width: 400px;
+   
+}
+.splide__slide button{
+    position: absolute;
+    top: 470px;
+    left: 170px;    
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid #FF6B00;
+    box-shadow: 2px 2px 50px #FF6B00;
+    cursor: pointer;
+    font-family: 'Ubuntu';
+}
+.splide__slide button:hover{
+    background: #FF6B00;
+}
+.splide__slide .spans{
+    position: absolute;
+    top: 550px;
+    left: 170px;
+}
+.splide__slide .trailer{
+    display: flex;
+    position: absolute;
+    top: 580px;
+    left: 170px;
+}
+
+.splide__slide .trailer img{
+    width: 20%;
+    margin-right: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.splide__slide .trailer img:hover{
+    transform: scale(1.18);
+}
+
+.trending{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    
+}
+
+
+.trending .muc{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: white;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 20px;
+}
+.trending a{
+    text-decoration: none;
+     position: absolute;
+    top: 30px;
+    left: 1400px;
+    color: white;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 20px;
+
+}
+.trending__child{
+   margin-top: 70px;
+   margin-left: 10px;
+   position: relative;
+   cursor: pointer;
+}
+
+.trending__child img{
+    width: 90%;
+    transition: 0.3s;
+}
+.trending__child:hover img {
+    transform: scale(1.05);
+}
+
+.trending__child .thumnails{
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    bottom: -185px;
+    background :rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    color: white;
+    font-family: 'Ubuntu';
+}
+.trending__child:hover .thumnails{
+    transform: scale(1.05) ;
+    opacity: 1;
+    
+}
+.trending__child .thumnails span{
+    margin-left: 10px;
+}
