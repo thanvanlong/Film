@@ -446,75 +446,75 @@ header .signin {
   border: 1px solid wheat;
   border-radius: 10px;
 }
-.more .reaction .comment .nav{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    font-family: 'Ubuntu';
-    font-weight: 700;
-    font-size: 25px;
-} 
-.more .reaction .comment .nav span{
-    position: relative;
+.more .reaction .comment .nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 25px;
 }
-.more .reaction .comment .nav span:nth-child(2):after{
-    content: "";
-    width: 100%;
-    height: 4px;
-    background: #ff6b00;
-    position: absolute;
-    bottom: -7px;
-    left: 0;
-    border-radius: 10px;
+.more .reaction .comment .nav span {
+  position: relative;
 }
-.more .reaction .comment .comment__child{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 30px;
-    color: white;
-    font-family: 'Ubuntu';
+.more .reaction .comment .nav span:nth-child(2):after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #ff6b00;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  border-radius: 10px;
 }
-.more .reaction .comment .comment__child::after{
-    content: "";
-    width: 95%;
-    height: 1px;
-    background: whitesmoke;
-    position: absolute;
-    bottom: -1px;
-    left: 15px;
+.more .reaction .comment .comment__child {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 30px;
+  color: white;
+  font-family: "Ubuntu";
 }
-.more .reaction .comment .comment__child .avatar{
-    width: 200px;
-    height: 100px; 
-    margin-left: 15px;
+.more .reaction .comment .comment__child::after {
+  content: "";
+  width: 95%;
+  height: 1px;
+  background: whitesmoke;
+  position: absolute;
+  bottom: -1px;
+  left: 15px;
 }
-.more .reaction .comment .comment__child .avatar img{
-    width: 70%;
-    border: 1px solid whitesmoke;
-    border-radius: 50%;
+.more .reaction .comment .comment__child .avatar {
+  width: 200px;
+  height: 100px;
+  margin-left: 15px;
+}
+.more .reaction .comment .comment__child .avatar img {
+  width: 70%;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
 }
 
-.more .reaction .comment .comment__child .comment__detials{
-    margin-right: 18px;
+.more .reaction .comment .comment__child .comment__detials {
+  margin-right: 18px;
 }
-.more .reaction .comment .comment__child .comment__detials p{
-    margin-top: 5px;
+.more .reaction .comment .comment__child .comment__detials p {
+  margin-top: 5px;
 }
-.comment__name{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
+.comment__name {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
 }
-.comment__name .username{
-    font-weight: 700;
+.comment__name .username {
+  font-weight: 700;
 }
 .more .reaction .related {
   width: 95%;
@@ -523,39 +523,262 @@ header .signin {
   top: 780px;
   right: 0;
   color: white;
+  font-family: "Ubuntu";
+}
+.more .reaction .related h2 {
+  position: relative;
+}
+.more .reaction .related h2::before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  background: #ff6b00;
+  position: absolute;
+  left: -10px;
+  top: 3px;
+}
+.more .reaction .related .related__child {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+.more .reaction .related .related__child img {
+  width: 90%;
+}
+.more .reaction .related .related__child .related__details {
+  width: 90%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 170px;
+  text-align: center;
+}
+.more .reaction .related .related__child .related__details p {
+  margin-top: 40px;
+}
+
+.video {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  top: 100px;
+}
+.video .video__source {
+  width: 1500px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 60px;
+}
+.video .video__source video {
+  width: 100%;
+  margin-left: 20px;
+  /* position: absolute;
+    top: 100px;
+    left: 230px; */
+}
+.video .video__source .ep {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  font-family: "Ubuntu";
+  font-weight: 700;
+}
+.video .video__source .ep .ep__details {
+  width: 270px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.video .video__source .ep .active {
+  color: #ff6b00;
+}
+.video .video__source .ep .active img {
+  border: 2px solid #ff6b00;
+}
+.video .filmname {
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 15px;
+  position: absolute;
+  top: 25px;
+  left: 70px;
+}
+.video .nav {
+  width: 68%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-left: 68px;
+}
+.video .nav .like {
+  padding: 10px 10px;
+  background: tomato;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: white;
+  font-family: "Ubuntu";
+  margin-left: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(252, 143, 0, 0.8);
+}
+.video .nav .sub {
+  padding: 10px 10px;
+  background: rgb(0, 119, 255);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: white;
+  font-family: "Ubuntu";
+  margin-left: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgb(0, 119, 255);
+}
+.server .server__child {
+  padding: 10px 10px;
+  background: rgb(0, 46, 99);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: white;
+  font-family: "Ubuntu";
+  margin-left: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgb(0, 46, 99);
+}
+.cmt {
+  width: 70%;
+  height: 45vh;
+  position: absolute;
+  top: 115vh;
+  left: 60px;
+}
+.cmt .cmt__type {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cmt .cmt__type .avatar {
+  width: 10%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cmt .cmt__type .avatar img {
+  width: 60%;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+}
+.cmt .cmt_input {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end; */
+}
+.cmt .cmt_input input{
+  width: 100%;
+  height: 50px;
+  background: none;
+  border: none;
+  color: white;
+  padding-left: 15px;
+  font-family: 'Ubuntu';
+  font-size: 15px;
+}
+
+.cmt .cmt_input input:focus{
+  outline: none;
+  color: white;
+  padding-left: 15px;
+  font-family: 'Ubuntu';
+  font-size: 15px;
+}
+.cmt .cmt_input .react{
+  width: 100%;
+  height: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.cmt .cmt_input .react .icon{
+  margin-left: 15px;
+  color: rgb(189, 189, 189);
+  font-size: 25px;
+  cursor: pointer;
+}
+.cmt .cmt_input .react .cmt__btn button{
+  padding: 8px 15px;
+  border: none;
+  color: rgb(148, 148, 148);
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
   font-family: 'Ubuntu';
 }
-.more .reaction .related h2{
-    position: relative;
+.cmt .cmt_input .react .cmt__btn .sub{
+  background: rgb(78, 78, 78);
 }
-.more .reaction .related h2::before{
-    content: "";
-    width: 8px;
-    height: 20px;
-    background: #ff6b00;
-    position: absolute;
-    left: -10px;
-    top: 3px;
+.cmt .cmt_input .react .cmt__btn .cnl{
+  background: none;
 }
-.more .reaction .related .related__child{
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 15px;
+.cmt .cmt_input .react::before{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: whitesmoke;
+  position: absolute;
+  top: -5px;
 }
-.more .reaction .related .related__child img{
-    width: 90%;
+.cmt .comment__child{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  position: relative;
+  top: 10px;
+  left: 0;
+  margin-bottom: 30px;
+  color: white;
+  font-family: "Ubuntu";
 }
-.more .reaction .related .related__child .related__details{
-    width: 90%;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 170px;
-    text-align: center;
+.cmt .comment__child .avatar{
+  width: 10%;
+  height: 90px;
 }
-.more .reaction .related .related__child .related__details p{
-    margin-top: 40px;
+.cmt .comment__child .avatar img{
+  width: 60%;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  margin-left: 19px;
+  margin-top: 10px;
+}
+.cmt .comment__child .comment__detials{
+  width: 90%;
+  height: 90px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .scroll {
   width: 50px;
@@ -572,6 +795,7 @@ header .signin {
   display: none;
   cursor: pointer;
 }
+
 .scroll i {
   color: white;
   font-size: 20px;
