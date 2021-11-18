@@ -24,3 +24,24 @@ const btnScroll = document.getElementById("scroll");
 btnScroll.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
+
+const btnCmt = document.getElementById('sub');
+const inputCmt = document.getElementById('cmt')
+inputCmt.addEventListener('input',()=>{
+  if(inputCmt.value){
+    btnCmt.setAttribute("class",'active');
+  }else{
+    btnCmt.setAttribute("class",'sub');
+  }
+ 
+})
+
+const icons = document.getElementById('icon');
+const iconDiv = document.getElementById('icons')
+icons.addEventListener('click',() => {
+  if(iconDiv.style.display ==="none"){
+    iconDiv.style.display = 'block'
+  }else{
+    iconDiv.style.display = 'none'
+  }
+})
