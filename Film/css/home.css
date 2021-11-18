@@ -455,6 +455,7 @@ header .signin {
 .more .moreinfo .know span {
   font-weight: 700;
   color: whitesmoke;
+  font-size: 17px;
 }
 .more .reaction {
   width: 100%;
@@ -567,6 +568,8 @@ header .signin {
 }
 .more .reaction .related .related__child {
   position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   height: auto;
   margin-top: 15px;
@@ -579,7 +582,8 @@ header .signin {
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 170px;
+  bottom: 0;
+  left: 0;
   text-align: center;
 }
 .more .reaction .related .related__child .related__details p {
