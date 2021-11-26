@@ -37,6 +37,7 @@ inputCmt.addEventListener('input',()=>{
 })
 
 const icons = document.getElementById('icon');
+console.log(icon);
 const iconDiv = document.getElementById('icons')
 icons.addEventListener('click',() => {
   if(iconDiv.style.display ==="none"){
@@ -45,3 +46,14 @@ icons.addEventListener('click',() => {
     iconDiv.style.display = 'none'
   }
 })
+
+let emoji = document.getElementsByClassName("emoji");
+for (let index = 0; index < emoji.length; index++) {
+  emoji[index].addEventListener('click',(e) =>{
+    inputCmt.value += e.target.textContent;
+    console.log(e.target.textContent);
+  })
+  
+}
+
+console.log(emoji.length);

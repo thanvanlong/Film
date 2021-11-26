@@ -774,13 +774,9 @@ header .signin {
   border-radius: 5px;
   
 }
-.cmt .cmt_input .react .icon .icon__s i{
-  margin-top: 5px;
-  margin-left: 2px; 
+.cmt .cmt_input .react .icon .icon__s span{
   padding: 2px 2px;
-  cursor: pointer;
-  color: #ff6b00;
-  
+  cursor: pointer;  
 }
 .cmt .cmt_input .react .cmt__btn button{
   padding: 8px 15px;
