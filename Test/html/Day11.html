@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Day11.css">
+</head>
+
+<body>
+    <div class="btn_show">
+        <button class="success" id="success">
+            Show Success
+        </button>
+        <button class="warning" id="warning">
+            Show Waring
+        </button>
+        <button class="error" id="error">
+            Show Error
+        </button>
+    </div>
+    <div class="toast" id="toast">
+        <!-- <div class="t_error">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>This is a error message !</span>
+            <span class="countdown"></span>
+        </div>
+        <div class="t_error">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>This is a error message !</span>
+            <span class="countdown"></span>
+        </div> -->
+    </div>
+</body>
+<script>
+    let btn_show = document.querySelectorAll('.btn_show button');
+    let toast = document.querySelectorAll('#success');
+    let tt = document.createElement('div');
+    // console.log(btn_show);
+    // console.log(toast);
+    const toasts = {
+        success: {
+            icon: '<i class="fas fa-check-circle"></i>'
+        },
+        error: {
+            icon: '<i class="fas fa-exclamation-triangle"></i>'
+        },
+        warning: {
+            icon: '<i class="fas fa-exclamation-circle"></i>'
+        },
+    }
+    btn_show.forEach(element => {
+        element.addEventListener('click', (e) => {
+            let ts = document.createElement('div');
+            ts.className = `t_${e.target.getAttribute('class')}`
+            ts.innerHTML = `
+                ${toasts[e.target.getAttribute('class')].icon}
+                <span>This is a ${e.target.getAttribute('class')} message !</span>
+                <span class="countdown"></span>
+            `
+            document.querySelector('#toast').appendChild(ts);
+            setTimeout(() => {
+                ts.setAttribute('style', 'animation: hide 1s ease forwards;');
+            }, 4500)
+            setTimeout(() => {
+                ts.remove()
+            }, 6000)
+        })
+    });
+
+</script>
+
+</html>

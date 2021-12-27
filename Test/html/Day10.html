@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day10.css">
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="todo" id="todo" placeholder="Enter your todo">
+        <button>Add</button>
+        <ul class="list-todo">
+            <li>Home work <span onclick="remov(this)"><i class="fas fa-trash"></i></span></li>
+            <li>Home work <span onclick="remov(this)"><i class="fas fa-trash"></i></span></li>
+        </ul>
+    </div>
+</body>
+<script>
+    let todo = document.getElementById('todo');
+    let ul = document.getElementsByClassName('list-todo')[0];
+    let btn = document.querySelectorAll('button')[0];
+    let li = document.querySelectorAll('li');
+    li.forEach(element =>{
+        element.addEventListener('click',()=>{
+            element.classList.toggle('completed')
+        })
+    })
+    btn.addEventListener('click', () => {
+        let li = `<li>${todo.value} <span onclick="remov(this)"><i class="fas fa-trash"></i></span></li>`
+        ul.insertAdjacentHTML('beforeend', li);
+        todo.value = ""
+    })
+    todo.addEventListener('keyup', (e) => {
+        if (e.keyCode == 13) {
+            let li = `<li>${e.target.value} <span onclick="remov(this)"><i class="fas fa-trash"></i></span></li>`
+            ul.insertAdjacentHTML('beforeend', li);
+            e.target.value = ""
+        }
+    })
+    const remov = (e) => {
+        e.parentElement.remove();
+    }
+</script>
+
+</html>

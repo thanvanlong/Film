@@ -73,6 +73,14 @@
         country.textContent = weather.sys.country;
         date.textContent = new Date().toLocaleString();
         tempValue.textContent = Math.floor(weather.main.temp);
+        if(weather.main.temp > 20){
+            document.getElementsByClassName('container')[0].setAttribute('style','background: url(../imgage/hot.png) no-repeat center/cover;');
+            document.getElementsByTagName("BODY")[0].setAttribute('style','background:linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(../imgage/hot.png) no-repeat center/cover;');
+            console.log(document.getElementsByClassName('container')[0]);
+        }else{
+            document.getElementsByClassName('container')[0].setAttribute('style','background: url(../imgage/cold.png) no-repeat center/cover;')
+            document.getElementsByTagName("BODY")[0].setAttribute('style','background:linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(../imgage/cold.png) no-repeat center/cover;')
+        }
         console.log(weather.main.temp);
         main.innerHTML = weather.weather[0].main;
         console.log(weather.weather[0].main);

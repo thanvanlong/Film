@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day17.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="facebook">
+            <h3>Facebook</h3>
+            <p></p>
+        </div>
+        <div class="youtube">
+            <h3>Youtube</h3>
+            <p></p>
+        </div>
+        <div class="tiktok">
+            <h3>Tiktok</h3>
+            <p></p>
+        </div>
+    </div>
+</body>
+<script>
+    let facebook = document.getElementsByClassName('facebook')[0].lastElementChild;
+    let youtube = document.getElementsByClassName('youtube')[0].lastElementChild;
+    let tiktok = document.getElementsByClassName('tiktok')[0].lastElementChild;
+    console.log(facebook);
+    const fbCount = (number) => {
+        let count = 0;
+        setInterval(() => {
+            count++;
+            if (count > number) {
+                return;
+            }
+            facebook.textContent = count;
+        }, 1);
+    }
+    const ytCount = (number) => {
+        let count = 0;
+        setInterval(() => {
+            count++;
+            if (count > number) {
+                return;
+            }
+            youtube.textContent = count;
+        }, 0.1);
+    }
+    const ttCount = (number) => {
+        let count = 0;
+        setInterval(() => {
+            count++;
+            if (count > number) {
+                return;
+            }
+            tiktok.textContent = count;
+        }, 1);
+    }
+    fbCount(1000);
+    ytCount(2000);
+    ttCount(500)
+</script>
+
+</html>

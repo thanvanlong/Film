@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Day15.css">
+</head>
+
+<body>
+    <div class="list-product">
+        <h3>Live Product Filter</h3>
+        <div class="search">
+            <label for="input"><i class="fas fa-search"></i></label>
+            <input type="text" id="input">
+        </div>
+        <span class="loading">Loading...</span>
+        <div class="list">
+
+        </div>
+    </div>
+</body>
+<script>
+    const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+    const result = words.filter(word => word.length > 6);
+
+    console.log(result);
+    function check(name) {
+        return name.includes(name);
+    }
+    let input = document.getElementById("input");
+    let list_product = document.querySelectorAll('.list')[0];
+    async function callApi() {
+        const url = "https://fakestoreapi.com/products";
+        const res = await fetch(url);
+        const result = await res.json();
+        const arr = result;
+        document.getElementsByClassName('loading')[0].remove();
+        result.forEach(element => {
+            let child = document.createElement('div');
+                child.className = "child";
+                child.innerHTML = `
+                        <img src="${element.image}"      alt="">
+                        <div class="detail">
+                            <p class="name">${element.title.slice(0, 30)}</p>
+                            <p class="price">$${element.price}</p>
+                        </div>`;
+                list_product.appendChild(child);
+
+        });
+        input.addEventListener("input", (e) => {
+            list_product.innerHTML = ""
+            result.forEach(element => {
+                if (element.title.includes(e.target.value)) {
+                    let child = document.createElement('div');
+                    child.className = "child";
+                    child.innerHTML = `
+                        <img src="${element.image}"      alt="">
+                        <div class="detail">
+                            <p class="name">${element.title.slice(0, 30)}</p>
+                            <p class="price">$${element.price}</p>
+                        </div>`;
+                    list_product.appendChild(child);
+                }
+
+            });
+        })
+
+        console.log(result);
+    }
+    callApi()
+</script>
+
+</html>

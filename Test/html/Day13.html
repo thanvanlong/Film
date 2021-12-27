@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day13.css">
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="upload">
+        <label for="file">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Upload to preview image</span>
+        </label>
+        <input type="file" id="file">
+    </div>
+</body>
+<script>
+    let img = document.getElementById('file');
+    img.addEventListener('change',(e)=>{
+        let read = new FileReader();
+        read.onload = ()=>{
+            console.log(read.result);
+            img.previousElementSibling.setAttribute('style','display: none')
+            let image = document.createElement('img');
+            image.src = read.result;
+            img.parentElement.appendChild(image)
+        };
+        read.readAsDataURL(img.files[0])
+    })
+</script>
+</html>

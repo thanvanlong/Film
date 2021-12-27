@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day14.css">
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <span class="right"><i class="fas fa-chevron-right"></i></i></span>
+        <span class="left"><i class="fas fa-chevron-left"></i></i></span>
+        <div class="content">
+            <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img1.jpeg" id="img" alt="">
+        </div>
+        <div class="slides">
+            <div class="slide active"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img1.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img2.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img3.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img4.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img5.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img6.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img7.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img8.jpeg" alt="">
+            </div>
+            <div class="slide"> <img src="https://www.nodemy.vn/projects/html-css-js/slideshow/img9.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let right = document.getElementsByClassName('right')[0];
+    let left = document.getElementsByClassName('left')[0];
+    let img = document.getElementById('img');
+    let count = 0;
+    let slide = document.getElementsByClassName('slide')
+    console.log(slide);
+    right.addEventListener('click',()=>{
+        count++;
+        if(count == 9){
+            img.src = slide[0].firstElementChild.src;
+            slide[8].classList.remove('active');
+            slide[0].classList.add('active')
+            count = 0;
+        }else{
+            img.src = slide[count].firstElementChild.src;
+            slide[count - 1].classList.remove('active');
+            slide[count].classList.add('active');
+        }
+        console.log(count);
+        
+    })
+    left.addEventListener('click',()=>{
+        count--;
+        if(count == -1){
+            img.src = slide[8].firstElementChild.src;
+            slide[0].classList.remove('active');
+            slide[8].classList.add('active')
+            count = 8;
+        }else{
+            img.src = slide[count].firstElementChild.src;
+            slide[count + 1].classList.remove('active');
+            slide[count].classList.add('active');
+        }
+        console.log(count); 
+    })
+    for (let i = 0; i < slide.length; i++) {
+        const element = slide[i];
+        element.addEventListener('click',(e)=>{
+            img.src = element.firstElementChild.src;
+            for (let i = 0; i < slide.length; i++) {
+                const element = slide[i];
+                element.classList.remove('active');
+            }
+            count = i;
+            element.classList.add('active');
+        })
+    }
+</script>
+</html>

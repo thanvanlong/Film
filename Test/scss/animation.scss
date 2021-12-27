@@ -1,0 +1,30 @@
+.loading{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 50px auto;
+    div{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        transform: rotate(calc(var(--value) * 45deg));
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 5px;
+            height: 5px;
+            border: 3px solid yellow;
+            border-radius: 50%;
+            filter: hue-rotate(calc(var(--value) * 45deg));
+            animation: loading 1s infinite;
+            animation-delay: calc(var(--value)*0.125s);
+        }
+    }
+}
+@keyframes loading{
+    to{
+        transform: scale(0);
+    }
+}

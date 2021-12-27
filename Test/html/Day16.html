@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day16.css">
+</head>
+
+<body>
+    <div class="first">
+        <div class="child_first">
+            <h1>Nodemy</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt blanditiis sunt atque sint quasi vitae
+                fuga officia, dolorum quaerat, totam quam quidem ipsum, ex ab. Cum illum labore rerum corporis.</p>
+        </div>
+    </div>
+    <div class="second">
+        <div class="child_second left">
+            <h1>Tilte</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, quas vel. Mollitia recusandae magnam sint
+                non illo voluptatum? Voluptates, molestias hic? Nesciunt temporibus error sint. Adipisci perferendis in
+                ducimus vitae.</p>
+        </div>
+        <div class="child_second right">
+            <h1>Tilte</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, quas vel. Mollitia recusandae magnam sint
+                non illo voluptatum? Voluptates, molestias hic? Nesciunt temporibus error sint. Adipisci perferendis in
+                ducimus vitae.</p>
+        </div>
+    </div>
+    <div class="third">
+        <div class="child_third">
+            <h2>Person 1 </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum doloribus id praesentium dolore atque,
+                deleniti molestias enim minima</p>
+        </div>
+        <div class="child_third">
+            <h2>Person 2 </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum doloribus id praesentium dolore atque,
+                deleniti molestias enim minima</p>
+        </div>
+        <div class="child_third">
+            <h2>Person 3 </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum doloribus id praesentium dolore atque,
+                deleniti molestias enim minima</p>
+        </div>
+    </div>
+</body>
+<script>
+    let first = document.querySelectorAll('.child_first');
+    let second = document.querySelectorAll('.child_second');
+    let third = document.querySelectorAll('.child_third');
+    if (document.documentElement.clientTop == 0) {
+        first.forEach(element => {
+            element.classList.add('start')
+        });
+    }
+    window.onscroll = function () {
+        sscroll()
+    }
+    const sscroll = () => {
+        if (document.documentElement.scrollTop > 300 & document.documentElement.scrollTop < 650 ) {
+            first.forEach(element => {
+                element.classList.remove('start')
+            });
+            second.forEach(e => {
+                e.classList.add('start')
+
+            });
+
+        }else if(document.documentElement.scrollTop < 300){
+            first[0].classList.add('start');
+            second.forEach(e => {
+                e.classList.remove('start')
+
+            });
+        }else if(document.documentElement.scrollTop > 650){
+            second.forEach(e => {
+                e.classList.remove('start')
+            });
+            third.forEach(e => {
+                e.classList.add('start')
+            });
+        }else if(document.documentElement.scrollTop < 500){
+            third.forEach(e => {
+                e.classList.remove('start')
+            });
+        }
+    }
+
+</script>
+
+</html>

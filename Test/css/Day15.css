@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dadada;
+}
+.list-product{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.search{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+h3{
+    line-height: 60px;
+}
+input{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #333;
+    outline: none;
+    border-radius: 5px;
+    padding: 18px 35px;
+}
+label{
+    position: absolute;
+    top: 10%;
+    left: 30px;
+}
+.list{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.child{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.child img{
+    width: 10%;
+}
+.detail{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.detail p:first-child{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 35px;
+    width: 100%;
+    overflow: hidden;
+}
