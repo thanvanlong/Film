@@ -129,6 +129,7 @@ header span{
     left: 40px;
     color: white;
     font-family: "Ubuntu";
+
 }
 .username input{
     background: none;
@@ -139,6 +140,7 @@ header span{
     margin-top: 7px;
     color: white;
     padding-left: 10px;
+    outline: none;
 }
 
 .pass{
@@ -149,6 +151,7 @@ header span{
     left: 40px;
     color: white;
     font-family: "Ubuntu";
+
 }
 .pass input{
     background: none;
@@ -160,7 +163,7 @@ header span{
     color: white;
     font-family: "Ubuntu";
     padding-left: 10px;
-    
+    outline: none;
 }
 
 .rememberme{
@@ -237,4 +240,11 @@ header span{
     top: 506px;
     left: 245px;
 
+}
+small{
+    color: red;
+    position: absolute;
+    top: 17%;
+    left: 110px;
+    font-family: 'Ubuntu';
 }

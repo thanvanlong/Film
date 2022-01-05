@@ -397,6 +397,14 @@ header .signin {
   position: absolute;
   left: -10px;
 }
+.story h3::before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  background: #ff6b00;
+  position: absolute;
+  left: -10px;
+}
 .more .moreinfo .story p {
   position: relative;
   margin-top: 15px;
@@ -510,7 +518,7 @@ header .signin {
   color: white;
   font-family: "Ubuntu";
 }
-.more .reaction .comment .comment__child::after {
+/* .more .reaction .comment .comment__child::after {
   content: "";
   width: 95%;
   height: 1px;
@@ -518,7 +526,7 @@ header .signin {
   position: absolute;
   bottom: -1px;
   left: 15px;
-}
+} */
 .more .reaction .comment .comment__child .avatar {
   width: 200px;
   height: 100px;
@@ -918,4 +926,24 @@ footer .copyright a {
   text-decoration: none;
   color: white;
   font-weight: 600;
+}
+.rep{
+  transform: translateX(95px);
+}
+.reply{
+  background: transparent;
+  width: 10%;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.rep input{
+  width: 70%;
+  outline: none;
+  padding: 5px 10px;
+  font-family: 'Ubuntu';
+}
+.disable{
+  display: none;
 }
